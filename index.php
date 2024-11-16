@@ -1,4 +1,4 @@
-```php
+<?php
 // Подключение файла соединения с БД
 include_once 'db.class.php';
 
@@ -18,4 +18,4 @@ define('db_pass','admin_password');
 $db = new DB_class(db_host,db_name,db_user,db_pass);
 
 $query = $db->select(true,"*","matsievskij","task_id='1'");
-```
+?>
