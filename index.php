@@ -9,7 +9,7 @@ define('db_host','localhost');
 define('db_name','matsievskij');
 
 // Пользователь БД
-define('db_user','admin');
+define('db_user','root');
 
 // Пароль БД
 define('db_pass','admin_password');
