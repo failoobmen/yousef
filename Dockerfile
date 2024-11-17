@@ -69,7 +69,7 @@ RUN sed -i "s/localhost/127.0.0.1/" /etc/phpmyadmin/config-db.php
 # Замените <your_access_token> и <your_repo> на реальные значения
 RUN rm -rf /var/www/html/*
 #RUN git clone https://kzm-dev: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@github.com/DrTiget/kzm_blog.git /var/www/html/
-RUN git clone https://github.com/failoobmen/yousef /var/www/html/
+RUN git clone https://github.com/failoobmen/yousef.git /var/www/html/
 # Настраиваем права доступа
 RUN chown -R www-data:www-data /var/www/html && \
     chmod -R 755 /var/www/html
