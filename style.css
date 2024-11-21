@@ -1,4 +1,4 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -6,25 +6,47 @@
 	border: 0;
 }
 
-.task{
+.task {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
-	border: 1px solid #ff32fd;
+	border: 1px solid #ccc; /* Серый цвет */
+	border-radius: 8px; /* Округлые углы */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+	background-color: #f9f9f9; /* Светло-серый фон */
+	transition: transform 0.2s, box-shadow 0.2s; /* Плавный переход */
 }
 
-.task-control{
+.task:hover {
+	transform: translateY(-3px); /* Лёгкое поднятие при наведении */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+.task-control {
 	flex-basis: 5%;
+	text-align: center;
+	color: #555; /* Тёмно-серый текст */
 }
 
-.task-text{
+.task-text {
 	flex-basis: 80%;
 	text-align: center;
-	color: #ac00ff;
-	border-left: 1px solid #ff32fd;
-	border-right: 1px solid #ff0000;
+	color: #333; /* Тёмно-серый для текста */
+	border-left: 1px solid #ddd; /* Светлый серый */
+	border-right: 1px solid #ddd; /* Светлый серый */
+	padding: 0 10px; /* Внутренний отступ */
+	font-size: 16px; /* Размер шрифта */
 }
 
-.task-date{
+.task-date {
 	flex-basis: 10%;
+	text-align: center;
+	font-weight: bold; /* Жирный текст */
+	color: #777; /* Бледно-серый */
+}
+
+body {
+	font-family: Arial, sans-serif; /* Базовый шрифт */
+	background-color: #eef2f3; /* Фон всей страницы */
+	padding: 20px; /* Отступы вокруг содержимого */
 }
