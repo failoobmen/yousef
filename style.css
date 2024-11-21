@@ -1,52 +1,56 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	outline: 0;
-	border: 0;
-}
-
-.task {
-	display: flex;
-	justify-content: space-between;
-	padding: 20px;
-	border: 1px solid #ccc; /* Серый цвет */
-	border-radius: 8px; /* Округлые углы */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
-	background-color: #f9f9f9; /* Светло-серый фон */
-	transition: transform 0.2s, box-shadow 0.2s; /* Плавный переход */
-}
-
-.task:hover {
-	transform: translateY(-3px); /* Лёгкое поднятие при наведении */
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
-}
-
-.task-control {
-	flex-basis: 5%;
-	text-align: center;
-	color: #555; /* Тёмно-серый текст */
-}
-
-.task-text {
-	flex-basis: 80%;
-	text-align: center;
-	color: #333; /* Тёмно-серый для текста */
-	border-left: 1px solid #ddd; /* Светлый серый */
-	border-right: 1px solid #ddd; /* Светлый серый */
-	padding: 0 10px; /* Внутренний отступ */
-	font-size: 16px; /* Размер шрифта */
-}
-
-.task-date {
-	flex-basis: 10%;
-	text-align: center;
-	font-weight: bold; /* Жирный текст */
-	color: #777; /* Бледно-серый */
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+outline: 0;
+border: 0;
 }
 
 body {
-	font-family: Arial, sans-serif; /* Базовый шрифт */
-	background-color: #eef2f3; /* Фон всей страницы */
-	padding: 20px; /* Отступы вокруг содержимого */
+font-family: Arial, sans-serif; /* Шрифт для всего документа */
+background-color: #f4f4f4; /* Легкий серый фон */
+color: #333; /* Тёмно-серый цвет текста по умолчанию */
+}
+
+.task {
+display: flex;
+justify-content: space-between;
+padding: 20px;
+border: 1px solid #ccc;
+background-color: #ffffff; /* Белый фон для задач */
+border-radius: 8px; /* Скругленные углы */
+margin-bottom: 10px; /* Отступ снизу */
+transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+.task:hover {
+background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+.task-control {
+flex-basis: 5%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.task-text {
+flex-basis: 80%;
+text-align: center;
+color: #333;
+border-left: 1px solid #ccc;
+border-right: 1px solid #aaa;
+padding: 10px;
+border-radius: 4px; /* Скругленные углы */
+}
+
+.task-text:hover {
+background-color: #f9f9f9; /* Цвет фона текста при наведении */
+}
+
+.task-date {
+flex-basis: 10%;
+text-align: center;
+font-weight: bold; /* Жирный шрифт для даты */
+color: #555; /* Более светлый оттенок серого */
 }
