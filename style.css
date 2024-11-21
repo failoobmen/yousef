@@ -1,0 +1,30 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: 0;
+	border: 0;
+}
+
+.task{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	border: 1px solid #ff32fd;
+}
+
+.task-control{
+	flex-basis: 5%;
+}
+
+.task-text{
+	flex-basis: 80%;
+	text-align: center;
+	color: #ac00ff;
+	border-left: 1px solid #ff32fd;
+	border-right: 1px solid #ff0000;
+}
+
+.task-date{
+	flex-basis: 10%;
+}
