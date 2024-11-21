@@ -3,7 +3,7 @@
 include_once 'db.class.php';
 
 // хост БД
-define('db_host','127.0.0.1');
+define('db_host','localhost:3306');
 
 // Имя БД
 define('db_name','matsievskij');
@@ -19,31 +19,36 @@ $db = new DB_class(db_host,db_name,db_user,db_pass);
 
 $query = $db->select(true,"*","matsievskij","");
 
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Мой задачник</title>
-      <link rel="stylesheet" type="text/css" href="style.css"
-  </head>
-  <body>
-  <div class="tasks">
-      <?php
-      for ($i = 0; $i < count($query);$i++){
-      ?>
-    
-  <div class="task-control">
-  <input type="checkbox" name="">
-  </div>
-  <div class="task-text"><?php echo $query[$i]['task_text'] ?></div>
-  <div class="task-date">
-  <input type="date" name=''>
-  </div>
-  </div>
-          <?php
-  }
-  ?>
-  </div>
-  </body>
+<head>
+	<title>Мой задачник</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="tasks">
+	<?php
+	for ($i = 0; $i < count($query);$i++) {
+		?>
+		<div class="task">
+			<div class="task-control">
+				<input type="checkbox" name="">
+			</div>
+			<div class="task-text"><?php echo $query[$i]['task_text'] ?></div>
+			<div class="task-date">
+				<input type="date" name="">
+			</div>
+		</div>
+		<?php
+	}
+	?>
+	
+	
 
+</div>
+</body>
 </html>
