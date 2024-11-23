@@ -10,45 +10,38 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border: 1px solid #ccc; /* Серый цвет */
+  border: 1px solid #777; /* Серый цвет */
   border-radius: 8px; /* Округлые углы */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
   background-color: #f9f9f9; /* Светло-серый фон */
   transition: transform 0.2s, box-shadow 0.2s; /* Плавный переход */
 }
 
-
-/* Основной блок задач */
-.tasks {
-  background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  max-width: 800px;
-  margin: 50px auto;
-}
 .task:hover {
-  transform: translateY(1%);/* Лёгкое поднятие при наведении вер*/
-  transform: translateX(1%);/* Лёгкое поднятие при наведении гор*/
+  transform: translateY(0.5%); /* Лёгкое поднятие при наведении */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+.task-text:hover {
+  color: #black;
+  font-size: 18px;
 }
 
 .task-control {
   flex-basis: 5%;
   text-align: center;
-  color: #555; /* Тёмно-серый текст */
+  color: #777; /* Тёмно-серый текст */
 }
 
 .task-text {
-  flex-basis: 79%;
+  flex-basis: 80%;
   text-align: center;
   color: #333; /* Тёмно-серый для текста */
-  border-left: 1px solid black; /* Светлый серый */
-  border-right: 1px solid black; /* Светлый серый */
+  border-left: 1px solid #777; /* как у фона */
+  border-right: 1px solid #777; /* как у фона */
   padding: 0 10px; /* Внутренний отступ */
   font-size: 16px; /* Размер шрифта */
 }
-
 
 .task-date {
   flex-basis: 10%;
@@ -57,6 +50,8 @@
   color: #777; /* Бледно-серый */
 }
 
-.body{
-  background-color: #777;
+body {
+  font-family: Arial, sans-serif; /* Базовый шрифт */
+  background-color: #777; /* Фон всей страницы */
+  padding: 20px; /* Отступы вокруг содержимого */
 }
